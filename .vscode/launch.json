@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'vtt-scraper'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=vtt-scraper",
+                    "--package=vtt-scraper"
+                ],
+                "filter": {
+                    "name": "vtt-scraper",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "Interview for Thesis_2022-03-18.vtt"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'vtt-scraper'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=vtt-scraper",
+                    "--package=vtt-scraper"
+                ],
+                "filter": {
+                    "name": "vtt-scraper",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
